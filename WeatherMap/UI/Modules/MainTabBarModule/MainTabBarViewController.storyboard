@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fZF-vJ-F1J">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tab Bar View Controller-->
+        <scene sceneID="jyF-wn-orC">
+            <objects>
+                <viewController id="fZF-vJ-F1J" customClass="MainTabBarViewController" customModule="WeatherMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="an3-dZ-mLX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgj-A4-JZr">
+                                <rect key="frame" x="0.0" y="807" width="414" height="55"/>
+                                <color key="backgroundColor" name="backgroung.white"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Bsl-Xz-KgF"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="Города" id="zVJ-YU-KDB">
+                                        <imageReference key="image" image="list.dash" catalog="system" symbolScale="medium"/>
+                                        <imageReference key="selectedImage" image="list.dash" catalog="system" symbolScale="large"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="Ваше местоположение" id="pSF-kE-neS">
+                                        <imageReference key="image" image="mappin.and.ellipse" catalog="system" symbolScale="medium"/>
+                                        <imageReference key="selectedImage" image="mappin.and.ellipse" catalog="system" symbolScale="large"/>
+                                    </tabBarItem>
+                                </items>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" name="background.black"/>
+                                <color key="selectedImageTintColor" name="backgroung.white"/>
+                            </tabBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l44-pT-i69" userLabel="ContentView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="807"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sx8-t1-Huw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sx8-t1-Huw" firstAttribute="bottom" secondItem="zgj-A4-JZr" secondAttribute="bottom" id="2Dg-I2-aLv"/>
+                            <constraint firstItem="l44-pT-i69" firstAttribute="top" secondItem="an3-dZ-mLX" secondAttribute="top" id="GEh-B0-MUQ"/>
+                            <constraint firstItem="l44-pT-i69" firstAttribute="trailing" secondItem="sx8-t1-Huw" secondAttribute="trailing" id="U69-WT-hD7"/>
+                            <constraint firstItem="zgj-A4-JZr" firstAttribute="top" secondItem="l44-pT-i69" secondAttribute="bottom" id="h5J-eh-nJq"/>
+                            <constraint firstItem="l44-pT-i69" firstAttribute="leading" secondItem="sx8-t1-Huw" secondAttribute="leading" id="nxN-YB-CvY"/>
+                            <constraint firstItem="zgj-A4-JZr" firstAttribute="trailing" secondItem="sx8-t1-Huw" secondAttribute="trailing" id="o6x-LP-4hU"/>
+                            <constraint firstItem="zgj-A4-JZr" firstAttribute="leading" secondItem="sx8-t1-Huw" secondAttribute="leading" id="sR5-yR-iJP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="l44-pT-i69" id="sra-zm-5qu"/>
+                        <outlet property="tabBar" destination="zgj-A4-JZr" id="y3l-hH-Bp2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="prp-gg-3Mg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-449.27536231884062" y="-64.285714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+        <namedColor name="background.black">
+            <color red="0.10999999940395355" green="0.10999999940395355" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroung.white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

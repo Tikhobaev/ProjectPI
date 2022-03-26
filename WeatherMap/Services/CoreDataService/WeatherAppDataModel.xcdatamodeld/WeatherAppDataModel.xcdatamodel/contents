@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CityWeatherEntity" representedClassName="CityWeatherEntity" syncable="YES">
+        <attribute name="cityName" attributeType="String"/>
+        <attribute name="humidity" attributeType="String"/>
+        <attribute name="tempC" attributeType="String"/>
+        <attribute name="weatherCode" attributeType="String"/>
+        <attribute name="weatherDescription" attributeType="String"/>
+        <attribute name="windspeedKmph" attributeType="String"/>
+        <relationship name="weekdaysWeather" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WeekDayWeatherEntity" inverseName="cityWeather" inverseEntity="WeekDayWeatherEntity"/>
+    </entity>
+    <entity name="CurrentLocationWeatherEntity" representedClassName="CurrentLocationWeatherEntity" syncable="YES">
+        <attribute name="cityName" attributeType="String"/>
+        <attribute name="humidity" attributeType="String"/>
+        <attribute name="tempC" optional="YES" attributeType="String"/>
+        <attribute name="weatherCode" optional="YES" attributeType="String"/>
+        <attribute name="weatherDescription" attributeType="String"/>
+        <attribute name="windspeedKmph" attributeType="String"/>
+        <relationship name="weekdaysWeather" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WeekDayWeatherEntity" inverseName="currentLocationWeather" inverseEntity="WeekDayWeatherEntity"/>
+    </entity>
+    <entity name="WeekDayWeatherEntity" representedClassName="WeekDayWeatherEntity" syncable="YES">
+        <attribute name="avgTempC" attributeType="String"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="maxTempC" attributeType="String"/>
+        <attribute name="minTempC" attributeType="String"/>
+        <attribute name="weatherCode" attributeType="String"/>
+        <attribute name="weatherDescription" attributeType="String"/>
+        <relationship name="cityWeather" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CityWeatherEntity" inverseName="weekdaysWeather" inverseEntity="CityWeatherEntity"/>
+        <relationship name="currentLocationWeather" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CurrentLocationWeatherEntity" inverseName="weekdaysWeather" inverseEntity="CurrentLocationWeatherEntity"/>
+    </entity>
+    <elements>
+        <element name="CityWeatherEntity" positionX="-17214.26953125" positionY="3939.66796875" width="128" height="148"/>
+        <element name="CurrentLocationWeatherEntity" positionX="-17222.10546875" positionY="4150.6875" width="128" height="148"/>
+        <element name="WeekDayWeatherEntity" positionX="-16956.671875" positionY="4053.3046875" width="128" height="163"/>
+    </elements>
+</model>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dvn-Ml-qLT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cities View Controller-->
+        <scene sceneID="DvU-fE-ZtE">
+            <objects>
+                <viewController id="dvn-Ml-qLT" customClass="CitiesViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lKU-hE-ciq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LJ-qf-3lY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" name="background.black"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="VbW-Hx-n8r"/>
+                                </constraints>
+                                <color key="barTintColor" name="background.black"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Города" id="21y-Ia-5ti">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bj5-aD-Mf9">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="addNewCity:" destination="dvn-Ml-qLT" id="irU-3W-Yll"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xx9-hd-Up2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" name="background.black"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jxm-eU-Skj">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" name="backgroung.blue.light"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="sectionIndexBackgroundColor" name="backgroung.blue.light"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="1Ux-Xd-uXw">
+                                    <rect key="frame" x="0.0" y="116" width="414" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CityWeatherTableViewCell" rowHeight="60" id="egW-s2-Lhx" userLabel="CityWeatherTableViewCell" customClass="CityWeatherTableViewCell" customModule="WeatherApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="egW-s2-Lhx" id="Lqh-Ub-Wtg">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.rain" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UWB-qa-3ar">
+                                                    <rect key="frame" x="8" y="4" width="52" height="53.5"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="52" id="YiS-9B-Lhq"/>
+                                                        <constraint firstAttribute="width" constant="52" id="jR2-cn-91s"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название города" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtu-xk-Kpd">
+                                                    <rect key="frame" x="68" y="8" width="251" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание погоды" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7A-Ag-PHT">
+                                                    <rect key="frame" x="68" y="29" width="251" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="text.gray.secondary"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+25º" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n95-Xg-BOc">
+                                                    <rect key="frame" x="321" y="15" width="54" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="54" id="jsL-cK-WcB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gtu-xk-Kpd" firstAttribute="top" secondItem="Lqh-Ub-Wtg" secondAttribute="top" constant="8" id="03O-rg-hjR"/>
+                                                <constraint firstAttribute="bottom" secondItem="UWB-qa-3ar" secondAttribute="bottom" constant="4" id="2zQ-1N-R20"/>
+                                                <constraint firstItem="F7A-Ag-PHT" firstAttribute="top" secondItem="Lqh-Ub-Wtg" secondAttribute="topMargin" constant="18" id="6WU-ql-3TK"/>
+                                                <constraint firstItem="gtu-xk-Kpd" firstAttribute="leading" secondItem="UWB-qa-3ar" secondAttribute="trailing" constant="8" id="HGs-KL-3eS"/>
+                                                <constraint firstItem="UWB-qa-3ar" firstAttribute="leading" secondItem="Lqh-Ub-Wtg" secondAttribute="leading" constant="8" id="Ni1-se-agQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="n95-Xg-BOc" secondAttribute="trailing" id="OJD-k9-Eqd"/>
+                                                <constraint firstItem="UWB-qa-3ar" firstAttribute="top" secondItem="Lqh-Ub-Wtg" secondAttribute="top" constant="4" id="Qna-IZ-DTh"/>
+                                                <constraint firstItem="F7A-Ag-PHT" firstAttribute="leading" secondItem="UWB-qa-3ar" secondAttribute="trailing" constant="8" symbolic="YES" id="V1Z-df-p7Y"/>
+                                                <constraint firstItem="n95-Xg-BOc" firstAttribute="leading" secondItem="F7A-Ag-PHT" secondAttribute="trailing" constant="2" id="dcg-2i-d1K"/>
+                                                <constraint firstItem="n95-Xg-BOc" firstAttribute="centerY" secondItem="Lqh-Ub-Wtg" secondAttribute="centerY" id="gyT-Yv-HWe"/>
+                                                <constraint firstItem="n95-Xg-BOc" firstAttribute="leading" secondItem="gtu-xk-Kpd" secondAttribute="trailing" constant="2" id="k7k-f0-9fa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="backgroung.white"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="cityNameLabel" destination="gtu-xk-Kpd" id="GM0-oX-xil"/>
+                                            <outlet property="dayTemeratureLabel" destination="n95-Xg-BOc" id="1e3-F7-zbe"/>
+                                            <outlet property="weatherDescriptionLabel" destination="F7A-Ag-PHT" id="Q7r-sz-zpP"/>
+                                            <outlet property="weatherImageView" destination="UWB-qa-3ar" id="u1Q-Na-YGr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="dvn-Ml-qLT" id="0QE-VS-tjv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g7k-dh-hND"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="jxm-eU-Skj" firstAttribute="top" secondItem="6LJ-qf-3lY" secondAttribute="bottom" id="69y-dU-u55"/>
+                            <constraint firstItem="jxm-eU-Skj" firstAttribute="leading" secondItem="g7k-dh-hND" secondAttribute="leading" id="EN0-5n-rxq"/>
+                            <constraint firstItem="6LJ-qf-3lY" firstAttribute="leading" secondItem="g7k-dh-hND" secondAttribute="leading" id="EVq-vG-bz3"/>
+                            <constraint firstAttribute="trailing" secondItem="xx9-hd-Up2" secondAttribute="trailing" id="QrG-Ov-X6q"/>
+                            <constraint firstItem="g7k-dh-hND" firstAttribute="trailing" secondItem="jxm-eU-Skj" secondAttribute="trailing" id="gKj-tq-9kt"/>
+                            <constraint firstItem="6LJ-qf-3lY" firstAttribute="top" secondItem="g7k-dh-hND" secondAttribute="top" id="hic-u7-aLz"/>
+                            <constraint firstAttribute="bottom" secondItem="jxm-eU-Skj" secondAttribute="bottom" id="i6U-SB-HWP"/>
+                            <constraint firstItem="xx9-hd-Up2" firstAttribute="top" secondItem="lKU-hE-ciq" secondAttribute="top" id="lBV-jZ-jX9"/>
+                            <constraint firstItem="xx9-hd-Up2" firstAttribute="leading" secondItem="lKU-hE-ciq" secondAttribute="leading" id="mBg-pe-p1e"/>
+                            <constraint firstItem="6LJ-qf-3lY" firstAttribute="top" secondItem="xx9-hd-Up2" secondAttribute="bottom" id="npj-ku-v3t"/>
+                            <constraint firstItem="6LJ-qf-3lY" firstAttribute="trailing" secondItem="g7k-dh-hND" secondAttribute="trailing" id="v4J-rG-siO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="citiesTableView" destination="jxm-eU-Skj" id="RcL-ra-2k4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ict-0h-kBS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="566.66666666666674" y="-289.28571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cloud.rain" catalog="system" width="128" height="125"/>
+        <namedColor name="background.black">
+            <color red="0.10999999940395355" green="0.10999999940395355" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroung.blue.light">
+            <color red="0.94099998474121094" green="0.94900000095367432" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroung.white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="text.gray.secondary">
+            <color red="0.44299998879432678" green="0.44299998879432678" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
