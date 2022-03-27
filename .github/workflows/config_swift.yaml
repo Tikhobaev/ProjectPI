@@ -14,9 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: xcodebuild -workspace WeatherMap.xcworkspace \
-            -scheme WeatherMap\ iOS \
-            -destination platform=iOS\ Simulator,OS=13.3,name=iPhone\ 11 \
-            clean test | xcpretty
+      run: xcodebuild -workspace WeatherMap.xcworkspace  -scheme WeatherMap
     - name: Run tests
       run: swift test -v
