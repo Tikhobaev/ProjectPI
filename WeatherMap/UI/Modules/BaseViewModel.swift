@@ -9,7 +9,7 @@
 
 import Foundation
 
-public protocol BaseViewModeling: class {
+public protocol BaseViewModeling: AnyObject {
     var isLoading: Bool { get }
     
     var didChange: (() -> Void)? { get set }
