@@ -14,8 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Pod install
-        run: pod install
+      run: pod install
     - name: Build
-        run: xcodebuild -workspace WeatherMap.xcworkspace  -scheme WeatherMap
+      run: xcodebuild -workspace WeatherMap.xcworkspace  -scheme WeatherMap
     - name: Run tests
-        run: swift test -v
+      run: swift test -v
