@@ -13,10 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Install Bundle
-      run: bundle install
-    - name: Build
-      run: bundle exec fastlane buildLane
     - name: Pod install
       run: pod install
     - name: Build
