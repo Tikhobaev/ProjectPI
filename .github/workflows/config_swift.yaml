@@ -16,6 +16,6 @@ jobs:
     - name: Pod install
       run: pod install
     - name: Build
-      run: xcodebuild -workspace WeatherMap.xcworkspace  -scheme WeatherMap
+      run: xcodebuild -workspace WeatherMap.xcworkspace -scheme WeatherMap CODE_SIGNING_REQUIRED=NO
     - name: Run tests
       run: swift test -v
