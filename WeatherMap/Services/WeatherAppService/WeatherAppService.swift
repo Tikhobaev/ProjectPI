@@ -11,7 +11,7 @@ import Foundation
 final class WeatherAppService {
     
     static let baseUrlString = "https://api.worldweatheronline.com/premium/v1/weather.ashx/"
-    internal static let apiKey = "a1a927bc65a94340b0591955200910"
+    internal static let apiKey = "d5b9b59c7b774d25834201001222803"
     
     static let shared = WeatherAppService()
     private init() {}
