@@ -17,6 +17,8 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Pod install
+      run: pod install
     - name: Build
       run: xcodebuild -workspace WeatherMap.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 8,OS=15.2' -scheme WeatherMap -allowProvisioningUpdates -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
   Tests:
@@ -24,6 +26,8 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Pod install
+      run: pod install
     - name: Build for tests
       run: xcodebuild build-for-testing -workspace WeatherMap.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 8,OS=15.2' -scheme WeatherMap -allowProvisioningUpdates -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
     - name: Run tests
