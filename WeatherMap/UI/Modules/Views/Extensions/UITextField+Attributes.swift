@@ -1,11 +1,3 @@
-//
-//  UITextField+Attributes.swift
-//  WeatherApp
-//
-//  Created by Dmitry Lemaykin on 30.03.2020.
-//  Copyright © 2020 Dmitry Lemaykin. All rights reserved.
-//
-
 import UIKit
 
 @IBDesignable

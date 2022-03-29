@@ -1,10 +1,3 @@
-//
-//  UIImage+WeatherImages.swift
-//  WeatherApp
-//
-//  Created by Dmitry Lemaykin on 14.10.2020.
-//
-
 import UIKit
 
 extension UIImage {

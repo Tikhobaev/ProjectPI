@@ -1,11 +1,3 @@
-//
-//  SynchronizationService.swift
-//  WeatherApp
-//
-//  Created by Илья Соловьёв on 13.10.2020.
-//  Copyright © 2020 Globus Ltd. All rights reserved.
-//
-
 import Foundation
 
 final class SynchronizationService {

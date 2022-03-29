@@ -1,11 +1,3 @@
-//
-//  CityWeatherViewController.swift
-//  WeatherApp
-//
-//  Created by Илья Соловьёв on 09.10.2020.
-//  Copyright © 2020 Globus Ltd. All rights reserved.
-//
-
 import UIKit
 
 protocol CityWeatherViewRouting: BaseRouting {

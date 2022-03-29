@@ -1,13 +1,3 @@
-//
-//  UITextView+Attributes.swift
-//  BonnetDriver
-//
-//  Created by Dmitry Lemaykin on 20.04.2020.
-//  Copyright © 2020 Dmitry Lemaykin. All rights reserved.
-//
-//  Big discussion:
-//  https://stackoverflow.com/questions/27652227/how-can-i-add-placeholder-text-inside-of-a-uitextview-in-swift
-
 import UIKit
 
 @IBDesignable

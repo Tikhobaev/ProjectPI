@@ -1,13 +1,3 @@
-//
-//  NetworkLogger.swift
-//  WeatherApp
-//
-//  Created by Андрей Журавлев on 08.10.2020.
-//  Copyright © 2020 Globus Ltd. All rights reserved.
-//
-//  Inspiered by:
-//  https://www.avanderlee.com/swift/printing-data-requests/
-
 import Foundation
 
 final class URLLogger: URLProtocol {

@@ -1,12 +1,3 @@
-//
-//  BaseViewController.swift
-//  WeatherApp
-//
-//  Created by Dmitry Lemaykin on 30.03.2020.
-//  Copyright © 2020 Dmitry Lemaykin. All rights reserved.
-//
-//  A base class for all ViewControllers is the app
-
 import UIKit
 
 class BaseViewController: UIViewController {

@@ -1,11 +1,3 @@
-//
-//  DateTimeFormatter+Time.swift
-//  WeatherApp
-//
-//  Created by Dmitry Lemaykin on 04.05.2020.
-//  Copyright © 2020 Dmitry Lemaykin. All rights reserved.
-//
-
 import Foundation
 
 class TimeDateFormatter: DateFormatter {

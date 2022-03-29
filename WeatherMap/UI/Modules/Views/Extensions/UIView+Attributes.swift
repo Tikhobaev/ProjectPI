@@ -1,13 +1,3 @@
-//
-//  UIView+Attributes.swift
-//  WeatherApp
-//
-//  Created by Dmitry Lemaykin on 30.03.2020.
-//  Copyright © 2020 Dmitry Lemaykin. All rights reserved.
-//
-//  Inspiered by:
-//  https://medium.com/@vialyx/import-uikit-custom-ibdesignable-uiview-cd26cf7e606c
-
 import UIKit
 
 // Needed to make changes visible on storyboard

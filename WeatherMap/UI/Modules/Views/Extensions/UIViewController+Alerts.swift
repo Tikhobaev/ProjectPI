@@ -1,11 +1,3 @@
-//
-//  UIViewController+Alerts.swift
-//  WeatherApp
-//
-//  Created by Dmitry Lemaykin on 28.11.2019.
-//  Copyright © 2019 Dmitry Lemaykin. All rights reserved.
-//
-
 import UIKit
 
 extension UIViewController {

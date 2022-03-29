@@ -1,13 +1,3 @@
-//
-//  MeasurementFormatter+Kilowatts.swift
-//  WeatherApp
-//
-//  Created by Dmitry Lemaykin on 04.05.2020.
-//  Copyright © 2020 Dmitry Lemaykin. All rights reserved.
-//
-//  Inspiered by:
-//  https://medium.com/@pwilko/scaling-measurement-in-swift-71f3c1856458
-
 import Foundation
 
 class PowerMeasurementFormatter: MeasurementFormatter {

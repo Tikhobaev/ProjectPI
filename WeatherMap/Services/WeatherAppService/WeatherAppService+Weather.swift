@@ -1,11 +1,3 @@
-//
-//  WeatherAppService+Weather.swift
-//  WeatherApp
-//
-//  Created by Андрей Журавлев on 09.10.2020.
-//  Copyright © 2020 Globus Ltd. All rights reserved.
-//
-
 import Foundation
 
 typealias GetWeatherCompletionHandler = (Result<GetWeatherResponse?, WeatherAppServerError>) -> ()

@@ -1,12 +1,3 @@
-//
-//  BaseRouter.swift
-//  WeatherApp
-//
-//  Created by Dmitry Lemaykin on 30.03.2020.
-//  Copyright © 2020 Dmitry Lemaykin. All rights reserved.
-//
-//  Navigate to the most common ViewControlles, like popups, alerts, and tosts
-
 import UIKit
 
 public protocol BaseRouting {
