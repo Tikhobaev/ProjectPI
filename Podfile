@@ -7,5 +7,11 @@ target 'WeatherMap' do
 
   # Pods for WeatherApp
   pod 'MBProgressHUD'
+  pod "SwiftyMocky"
+
+  target 'WeatherMapTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
 
 end

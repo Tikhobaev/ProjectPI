@@ -10,6 +10,13 @@ import Foundation
 import CoreLocation
 import MapKit
 
+protocol LocationServiceProtocol: AutoMockable {
+    var currentLattitude: Double { get }
+    var currentLongtitude: Double { get }
+    func requestAlwaysAndWhenInUseAccess()
+    func startUpdatinglocation()
+}
+
 final class LocationService {
     
     static let shared = LocationService()

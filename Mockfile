@@ -1,0 +1,16 @@
+sourceryCommand: null
+sourceryTemplate: null
+unit.tests.mock:
+  sources:
+    include:
+    - ./WeatherMap
+    exclude: []
+  output: ./WeatherMapTests/Mocks/Mock.generated.swift
+  targets:
+  - WeatherMapTests
+  testable:
+  - WeatherMap
+  import:
+  - CoreLocation
+  - Foundation
+  - MapKit
