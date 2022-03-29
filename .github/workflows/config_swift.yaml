@@ -15,11 +15,13 @@ jobs:
       run: pod install
   Build:
     needs: Setup
+    runs-on: macos-latest
     steps:
     - name: Build
       run: xcodebuild -workspace WeatherMap.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 8,OS=15.2' -scheme WeatherMap -allowProvisioningUpdates -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
   Tests:
     needs: Setup
+    runs-on: macos-latest
     steps:
     - name: Build for tests
       run: xcodebuild build-for-testing -workspace WeatherMap.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 8,OS=15.2' -scheme WeatherMap -allowProvisioningUpdates -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
